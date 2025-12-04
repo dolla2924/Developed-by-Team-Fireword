@@ -1,0 +1,307 @@
+:root{
+    --primary-color:#99a98f;
+    --decent-color:#d6e8db;
+    --accent-color:#fff;
+    --secondary-color:#09bd09;
+    --text-color:gray;
+    --font-family:'poppins',sans-seri;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+body{
+    background-color: var(--accent-color);
+    padding: 0 2%;
+}
+.header{
+    padding: 10px;
+}
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.burger{
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.search_box{
+    background: var(--decent-color);
+    border-radius: 20px;
+    flex: 1;
+    display: flex; 
+    align-items: center;
+    padding: 0 14px;
+}
+.search_box i{
+    color: var(--primary-color);
+}
+.search_box input{
+    background: transparent;
+    padding: 10px;
+    width: 80%;
+}
+.menu_icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu_icon i{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--decent-color);
+
+}
+.fa-cart-shopping{
+    font-size: 25px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+.cart_icon{
+    position: relative;
+    cursor: pointer; 
+}
+.cart_icon span{
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    height: 20px; 
+    width: 20px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    padding: 5px;
+    font-size: 12px; 
+}
+
+/* cover section */
+.cover{
+    background-image: url(images/image\ 1.webp);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+.cover-overlay{
+    background-color: #00000055;
+    height: 100%;
+    border-radius: 25px;
+    padding: 40px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cover-overlay h1{
+    font-size: 50px;
+    letter-spacing: 1;
+    font-weight: bold;
+    padding: 10px;
+}
+.cover-overlay .slogan{
+    font-size: 30px;
+    letter-spacing: 1;
+}
+/* main section */
+.heading{
+    font-size: 25px;
+    margin: 10px 0 ;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.menu_list{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+.menu_items{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    padding: 14px 10px 20px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+.menu_items img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 10px;
+    object-fit: cover; 
+}
+.menu_items h5{
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px ;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+/* card section */
+.list_card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: stretch; 
+    justify-content: center;
+}
+.card{
+    width: 24%;
+    min-width: 200px; 
+    border: 1.5px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    padding: 15px;
+    box-shadow:0px 10px 15px -3px #00000055 ;
+    text-align: center;
+}
+.card img{
+    width: 100%;
+    height: 200px; 
+    border-radius: 20px;
+    box-shadow:0px 10px 15px -3px #00000055 ;
+    object-fit: cover;
+}
+.card h2{
+    padding-top: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.card_price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+.card_price .price{
+    font-size: 20px;
+    color:#088178;
+    font-weight: 600;
+}
+.card_price .fa-solid{
+    background-color: #088178;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px; 
+}
+/* sidebar section */
+.sidebar{ 
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    background-color: #fff;
+    box-shadow:0px 10px 15px -3px #00000055;
+    transition: right .5s ease-in-out;
+    z-index: 999;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px ;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-close i{
+    position: absolute;
+    right: 20px; 
+    top: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--text-color);
+}
+.card-menu h3{
+    padding: 20px;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-bottom: 1px solid var(--decent-color); 
+}
+.cart-items-list {
+    flex-grow: 1; 
+    padding: 10px 20px;
+    overflow-y: auto; 
+}
+.individual-cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--decent-color);
+    font-size: 16px;
+}
+.individual-cart-item:last-child {
+    border-bottom: none;
+}
+.remove-btn {
+    background: none;
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sidebar_footer{
+    padding: 20px;
+    border-top: 1px solid var(--decent-color); 
+}
+.totel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.totel h5{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.checkout-btn{
+    width: 100%;
+    background-color: var(--secondary-color); 
+    color: var(--accent-color);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow:0px 10px 15px -3px #00000055
+}
