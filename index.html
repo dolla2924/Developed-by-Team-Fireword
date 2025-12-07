@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    <!--header  -->
     <header>
         <div class="header">
             <nav class="header_menu">
@@ -24,22 +24,25 @@
                 <div class="menu_icon">
                     <i class="fa-solid fa-bowl-food"></i>
                 </div>
-                <div class="cart_icon" id="cart-icon"> 
+                <div class="cart_icon" id="cart-icon">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>0</span>
                 </div>
             </nav>
         </div>
     </header>
-
+    <!--section home  -->
     <section class="cover">
         <div class="cover-overlay">
             <h1>quick bite</h1>
             <span class="slogan">where tasts takes the fast lane</span>
         </div>
     </section>
-    <section>
+
+    <!-- menus -->
+    <section id="main-menu-content">
         <h2 class="heading">food menu</h2>
+        <!-- food menu  -->
         <div class="menu_list">
             <div class="menu_items">
                 <img src="images/image 2.jpg" alt="Salad">
@@ -74,6 +77,7 @@
                 <h5>caffee</h5>
             </div>
         </div>
+        <!-- menu item  -->
         <h2 class="heading">menu item</h2>
         <div class="list_card">
             <div class="card">
@@ -81,7 +85,8 @@
                 <h2 class="card-title">salad</h2>
                 <div class="card_price">
                     <div class="price">20 LE</div>
-                    <i class="fa-solid fa-cart-shopping add-to-cart"></i> </div>
+                    <i class="fa-solid fa-cart-shopping add-to-cart"></i>
+                </div>
             </div>
             <div class="card">
                 <img src="images/image 3.jpg" alt="Burger">
@@ -124,7 +129,8 @@
             </div>
             <div class="card">
                 <img src="images/image 8.jpg" alt="Soft Drink">
-                <h2 class="card-title">soft drink</h2> <div class="card_price">
+                <h2 class="card-title">soft drink</h2>
+                <div class="card_price">
                     <div class="price">10 LE</div>
                     <i class="fa-solid fa-cart-shopping add-to-cart"></i>
                 </div>
@@ -138,23 +144,140 @@
                 </div>
             </div>
         </div>
+        
     </section>
     <section>
-        <div class="sidebar" id="sidebar"> <div class="sidebar-close"> <i class="fa-solid fa-close"></i>
+        <!-- sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-close"> <i class="fa-solid fa-close"></i>
             </div>
             <div class="card-menu">
-                <h3>my cart</h3> </div>
+                <h3>my cart</h3>
+            </div>
             <div class="cart-items-list">
-                </div>
+            </div>
             <div class="sidebar_footer">
                 <div class="totel">
                     <h5>total</h5>
-                    <div class="cart-total">LE 0.00</div> </div>
+                    <div class="cart-total">LE 0.00</div>
+                </div>
                 <button class="checkout-btn">checkout</button>
             </div>
         </div>
     </section>
+    <!-- checkout -->
+    <section class="checkout-options-container" id="checkout-options-container" style="display: none;">
+        <h2 class="heading">Choose Your Option</h2>
+        <div class="checkout-buttons">
+            <button id="Dine_btn" class="checkout-option-btn">Dine In</button>
+            <button id="Takeaway_btn" class="checkout-option-btn">Takeaway</button>
+            <button id="Delivery_btn" class="checkout-option-btn">Delivery</button>
+        </div>
+    </section>
+    <!-- forms dine_in -->
+    <section class="form-section" id="dine_in" style="display: none;">
+        <h2 class="heading">Dine In Details</h2>
+        <form class="checkout-form">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label>Number of Table</label>
+                <input type="number" placeholder=" 2" min="1" required>
+            </div>
+            <button type="submit" class="send-btn">Confirm Dine In</button>
+        </form>
+    </section>
+    <!-- forms Takeaway -->
+    <section class="form-section" id="Takeaway" style="display: none;">
+        <h2 class="heading">Takeaway Details</h2>
+        <form class="checkout-form">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+            <div class="input-group">
+                <label>Estimated Pickup Time</label>
+                <input type="time">
+            </div>
+            <button type="submit" class="send-btn">Confirm Takeaway</button>
+        </form>
+    </section>
+    <!-- forms Delivery -->
+    <section class="form-section" id="Delivery" style="display: none;">
+        <h2 class="heading">Delivery Details</h2>
+        <form class="checkout-form">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+            <div class="input-group">
+                <label>Full Address</label>
+                <textarea placeholder="*********" required></textarea>
+            </div>
+            <button type="submit" class="send-btn">Confirm Delivery</button>
+        </form>
+    </section>
+    <!-- problem -->
+    <section class="problem-form-two-columns">
+        <div class="left-form">
+            <h2 class="section-heading">Report a Problem</h2>
+            <form id="problemForm" class="problem-form">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
 
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Problem Type</label>
+                    <select required>
+                        <option value="">Choose an issue</option>
+                        <option>Order delay</option>
+                        <option>Wrong item received</option>
+                        <option>Payment issue</option>
+                        <option>App/Website issue</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Describe the Issue</label>
+                    <textarea placeholder="Write your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">Submit</button>
+            </form>
+        </div>
+
+        <div class="right-info">
+            <h3>How We Handle Issues</h3>
+            <p>
+                We take your feedback seriously. Any issue reported will be reviewed by our support team within 24
+                hours.
+                Your satisfaction is our top priority!
+            </p>
+            <ul>
+                <li>✔ Fast response</li>
+                <li>✔ Order follow-up</li>
+                <li>✔ Refund & compensation when necessary</li>
+                <li>✔ Continuous improvement of our service</li>
+            </ul>
+        </div>
+    </section>
     <script src="main.js"></script>
 </body>
 
