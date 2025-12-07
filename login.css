@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  /* background-color: #f0f4f8; */
+  background-image: url("22.png");
+  /* background-color: #99a98f; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+
+.container {
+  width: 900px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+/* left / top */
+.left {
+  width: 45%;
+background-color: #99a98f;
+  /* background-image: url("OIP.jpg"); */
+  background-size: cover;
+
+  background-position: center;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+  padding: 50px;
+}
+
+.left h1 {
+  margin: 0;
+  font-size: 35px;
+}
+
+.left p {
+  margin: 15px 0 30px;
+  font-size: 15px;
+}
+
+.left button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+/* الجزء right/ down */
+.right {
+  background-color: white;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.right h2 {
+  margin-bottom: 15px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+   width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+    position: relative;
+    margin: 0 5px;
+    z-index: 10;
+    overflow: hidden;
+}
+.socials a .fa-google,.socials a .fa-instagram,.socials a .fa-twitter{
+    line-height: 30px;
+  font-size: 15px;
+    line-height: 30px;
+    z-index: 10;
+    position: relative;
+    transition: 0.5s;
+}
+.socials i.fa-google{
+  color:crimson ;
+}
+.socials i.fa-instagram{
+  color:indigo ;
+}
+.socials i.fa-twitter{
+  color:deepskyblue ;
+}
+.socials a:hover::after{
+  left: 0;
+}
+
+.socials a::after{
+  content: '';
+    width: 100%;
+    height: 100%;
+    background: #088178;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+.or {
+  margin: 15px 0;
+  font-size: 13px;
+  color: gray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+
+#signupForm input {
+  padding: 10px;
+  border: 1.5px solid #99a98f;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+#loginForm input {
+  padding: 10px;
+  border: 1.5px solid #99a98f;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+#signUpBtn  {
+    text-align: center;
+    text-decoration: none;
+  background-color: #99a98f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#loginbtn{
+  text-align: center;
+  text-decoration: none;
+  background-color: #99a98f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#signUpBtn:hover {
+  background-color: #080909;
+}
+#loginbtn:hover {
+  background-color: #080909;
+}
+
+#message {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  
+  .left, .right {
+    width: 100%;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .left h1 {
+    font-size: 28px;
+  }
+}
